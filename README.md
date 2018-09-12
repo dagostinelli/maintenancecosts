@@ -1,7 +1,9 @@
-# Maintenance Costs
+## Maintenance Costs
 by Darryl T. Agostinelli
 
 This is the official repository for the book titled "Maintenance Costs".
+
+This book is a work in progress.
 
 The book is written in open source style, meaning the raw text as well as the typesetting code (called Markdown) is avaiable for you to read, comment on and recommend changes to.  
 
