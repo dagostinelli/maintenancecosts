@@ -5,7 +5,7 @@ This is the official repository for the book titled "Maintenance Costs".
 
 This book is a work in progress.
 
-The book is written in open source style, meaning the raw text as well as the typesetting code (called Markdown) is avaiable for you to read, comment on and recommend changes to.  
+The book is written in open source style, meaning the raw text as well as the typesetting code (called Markdown) is available for you to read, comment on and recommend changes to.  
 
 If you find an issue or have a suggestion, please file an issue here in the GitHub repository.
 
