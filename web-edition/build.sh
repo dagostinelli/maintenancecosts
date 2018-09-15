@@ -1,5 +1,7 @@
 #! /bin/bash
 
+set -e
+
 pushd `pwd`
 
 cd $(dirname $(readlink -f -s "$BASH_SOURCE"))
@@ -14,5 +16,7 @@ fi
 rm -rf ../docs/*
 source venv/bin/activate && python3 build.py
 cp -a assets/* ../docs/
+mkdir -p ../docs/css
+scss templates/index.scss ../docs/css/index.css
 
 popd

@@ -8,7 +8,7 @@ notifier = pyinotify.Notifier(wm)
 
 mask = pyinotify.IN_CLOSE_WRITE
 
-wm.add_watch('book/', mask)
+wm.add_watch('../book/', mask)
 
 def on_event(notifier, stuff):
 	call(["make", "build"])

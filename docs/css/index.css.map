@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,8DAA+D;EAC9D,MAAM,EAAE,CAAC",
+"sources": ["../../web-edition/templates/index.scss"],
+"names": [],
+"file": "index.css"
+}

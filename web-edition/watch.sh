@@ -1,5 +1,7 @@
 #! /bin/bash
 
+set -e
+
 pushd `pwd`
 
 cd $(dirname $(readlink -f -s "$BASH_SOURCE"))
