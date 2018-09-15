@@ -12,4 +12,4 @@ build:
 	./build.sh
 
 watch:
-	source venv/bin/activate && python -m pyinotify -v /book
+	./watch.sh
