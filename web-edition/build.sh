@@ -11,6 +11,8 @@ if [ ! -d "venv" ]; then
 	deactivate
 fi
 
-source venv/bin/activate && rm -rf html/* && python3 build.py
+rm -rf ../docs/*
+source venv/bin/activate && python3 build.py
+cp -a assets/* ../docs/
 
 popd

@@ -1,15 +1,17 @@
 .PHONY: clean-venv
 
-default: build
+default: buildwebedition
 
 clean-venv:
-	@rm -rf venv/
-	@rm -rf html/
+	@rm -rf ./web-edition/venv/
 
 clean: clean-venv
 
-build:
-	./build.sh
+buildwebedition:
+	./web-edition/build.sh
 
 watch:
-	./watch.sh
+	./web-edition/watch.sh
+
+serve: buildwebedition
+	./web-edition/serve.sh
