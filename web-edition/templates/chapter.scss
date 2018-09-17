@@ -1,0 +1,15 @@
+// chapter.scss -> chapter.css
+
+$primary-color: hotpink;
+
+body, h1, h2, h3, h4, p, blockquote, code, ul, ol, dl, dd, img {
+	margin: 0;
+}
+
+body {
+	line-height: 24px;
+	color: #222;
+	font: serif;
+	background: #e8e6e3;
+}
+

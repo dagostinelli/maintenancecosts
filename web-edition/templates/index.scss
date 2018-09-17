@@ -1,6 +1,85 @@
 // index.scss -> index.css
 
+@import "grid.scss";
+
+$text-color: #222;
+$heading-color: #e75819;
+$light-gray: #eee;
+
 body, h1, h2, h3, h4, p, blockquote, code, ul, ol, dl, dd, img {
 	margin: 0;
+}
+
+body {
+	line-height: 24px;
+	color: $text-color;
+	font: serif;
+	background: #cdcdcd;
+	background-image: url('../img/sea-3652697_1920.jpg');
+}
+
+footer {
+	max-width: 640px;
+	margin: 20px auto;
+	text-align: center;
+	color: #aaa;
+	border-top: 1px solid black;
+	padding-top:20px;
+}
+
+.page {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 0 20px 0;
+	background: white url(images/splash.jpg) no-repeat center top/100%;
+	border-left: solid 1px #bbb;
+	border-right: solid 1px #bbb;
+	border-bottom: solid 1px #999;
+	box-shadow: 0 0 40px rgba(71, 51, 31, 0.2); 
+}
+
+h1 {
+	color: $heading-color;
+	font: 300 35px sans-serif;
+	font-weight: bold;
+	padding: 0 0 2px 0;
+}
+
+h2 {
+	color: $heading-color;
+	font: 300 35px sans-serif;
+	margin: 40px 0 15px 0;
+	padding: 0 0 2px 0;
+}
+
+.print {
+	padding: 10px;
+	margin: 20px;
+	border: 1px solid gray;
+	background-color: $light-gray;
+	
+	.print-read-button
+	{
+		background-color: #0b95da;
+		color: white;
+		padding: 10px;
+		margin: 5px;
+		display: block;
+		border-radius: 5px;
+		text-shadow: 0px 2px 1px #000;
+		box-shadow: 0px 2px 1px #000;
+		font: 300 20px sans-serif;
+		text-align: center;
+		font-weight:500;
+		text-decoration: none;
+	}
+	
+	.print-image {
+		border-radius: 4px;
+		background-size: cover;
+		background-image: url('../img/sea-3652697_1920.jpg');
+		height:100%;
+		display:block;
+	}
 }
 
