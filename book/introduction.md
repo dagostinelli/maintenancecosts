@@ -4,3 +4,21 @@ Most of the cost to maintain a piece of software is not actually the initial con
 
 Legend has it that 80%+ of total cost of a software project is in the maintenance portion of the project lifetime and not its initial construction.  
 
+This is really a book of themes.  I am not a professional writer.  This is my first book.  It's been a long time coming.
+
+3 reasons this book exists
+- scream it from the mountains, frustration, therapy
+- supports business, says what I keep telling you in person
+- legacy
+
+I actually attempted to write a different book before I wrote this one.  
+
+It is said that you are a journeyman when you can explain your craft.  
+
+I actually tried to write this book a long time ago. 
+
+I'm writing this because I have something to say.  
+
+I've been at this a long time.  I'm ready to tell you now.
+
+When I think back on my career over all these years, I 

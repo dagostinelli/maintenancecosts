@@ -12,7 +12,9 @@ output_location = whereami + '/../docs/book'
 output_location_root = whereami + '/../docs'
 
 chapters = [
-	'introduction.md'
+	'toc.md',
+	'introduction.md',
+	'curate-your-code.md'
 ]
 
 def build_chapters():

@@ -2,40 +2,52 @@
 
 @import "grid.scss";
 
-$text-color: #222;
-$heading-color: #e75819;
-$light-gray: #eee;
+$color-neutral: rgb(131, 125, 124);
+$color-yellow: rgb(208, 251, 5);
+$color-red: rgb(225, 30, 56);
+$color-magenta: rgb(208, 47, 207);
+$color-cyan: rgb(20, 179, 235);
+$color-green: rgb(87, 156, 70);
 
-body, h1, h2, h3, h4, p, blockquote, code, ul, ol, dl, dd, img {
+$color-yellow-light: rgb(241, 254, 179);
+$color-neutral-light: rgb(218, 215, 215);
+
+$color-neutral-dark: rgb(39, 37, 37);
+
+$heading-color: $color-red;
+
+body, h1, h2, h3, h4, p, blockquote, code, ul, li, ol, dl, dd, img {
 	margin: 0;
+	padding: 0;
 }
 
 body {
-	line-height: 24px;
-	color: $text-color;
+	color: $color-neutral-dark;
 	font: serif;
-	background: #cdcdcd;
-	background-image: url('../img/sea-3652697_1920.jpg');
-}
-
-footer {
-	max-width: 640px;
-	margin: 20px auto;
-	text-align: center;
-	color: #aaa;
-	border-top: 1px solid black;
-	padding-top:20px;
+	background: $color-neutral-light;
+	/*background-image: url('../img/abstract-ancient-antique-235985.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;*/
 }
 
 .page {
 	max-width: 940px;
 	margin: 0 auto;
 	padding: 0 0 20px 0;
-	background: white url(images/splash.jpg) no-repeat center top/100%;
 	border-left: solid 1px #bbb;
 	border-right: solid 1px #bbb;
 	border-bottom: solid 1px #999;
-	box-shadow: 0 0 40px rgba(71, 51, 31, 0.2); 
+	box-shadow: 0 0 40px rgba(71, 51, 31, 0.2);
+	background: white;
+	
+	background-image:url('../img/code-background.png');
+	background-repeat: no-repeat;
+	background-size: 100% 30vh;
+}
+
+// ensures that images scale (responsive design)
+img {
+	max-width:100%;
 }
 
 h1 {
@@ -48,26 +60,117 @@ h1 {
 h2 {
 	color: $heading-color;
 	font: 300 35px sans-serif;
-	margin: 40px 0 15px 0;
-	padding: 0 0 2px 0;
+}
+
+p {
+	margin-bottom: 15px;
+	margin-top: 5px;
+	line-height: 24px;
+}
+
+.no-underline {
+	text-decoration: none;
+}
+
+.book-title {
+
+	min-height: 15vh;
+	
+	padding-top:2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom:2rem;
+	
+	h1 {
+		font-family: 'Luckiest Guy', cursive;
+		font-weight: normal;
+		text-align:center;
+		font-size: calc(1.0rem + 4vw);
+		color: $heading-color;
+	}
+	
+	h2 {
+		font-weight: normal;
+		text-align:center;
+		font-size: calc(0.75rem + 1.5vw);
+		color: $heading-color;
+	}
+	
+	h3 {
+		font-weight: bold;
+		text-align:center;
+		font-size: calc(0.75rem + 1.5vw);
+		font-family: 'Oregano', cursive;
+		color: #43aa33;
+		margin-top:1.5rem;
+	}
+}
+
+.pitches {
+	h3 {
+		padding-left:1.5rem;
+		font-family: 'Oregano', cursive;
+		font-size: 2.0rem;
+	}
+	
+	.pitch-1 {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		color: black;
+		background-color: $color-yellow-light;
+		border-radius: 5px;
+		
+		ul {
+			padding-left:2.5rem;
+		}
+
+		li {
+			padding-left:0.5rem;
+			padding-right:1.5rem;
+			padding-bottom:0.5rem;
+		}
+	}
+	
+	.pitch-2 {
+		color:black;
+
+		p {
+			margin-bottom: 15px;
+			margin-top: 5px;
+			line-height: 24px;			
+		}
+		
+		.stuff {
+			vertical-align:bottom;	
+			display:table-cell;
+			height: 40vh;
+		}
+	}	
 }
 
 .print {
 	padding: 10px;
 	margin: 20px;
-	border: 1px solid gray;
-	background-color: $light-gray;
+	border: 1px solid $color-neutral-dark;
+	background-color: $color-neutral-light;
+	border-radius: 15px;
 	
+	p {
+		margin-bottom: 15px;
+		margin-top: 5px;
+		line-height: 24px;
+	}
+
 	.print-read-button
 	{
-		background-color: #0b95da;
+		background-color: $color-green;
 		color: white;
 		padding: 10px;
 		margin: 5px;
 		display: block;
 		border-radius: 5px;
-		text-shadow: 0px 2px 1px #000;
-		box-shadow: 0px 2px 1px #000;
+		text-shadow: 0px 2px 1px $color-neutral-dark;
+		box-shadow: 0px 2px 1px $color-neutral-dark;
 		font: 300 20px sans-serif;
 		text-align: center;
 		font-weight:500;
@@ -76,10 +179,56 @@ h2 {
 	
 	.print-image {
 		border-radius: 4px;
+		background-image:url('../img/code-background.png');
+		background-repeat: no-repeat;
 		background-size: cover;
-		background-image: url('../img/sea-3652697_1920.jpg');
-		height:100%;
-		display:block;
+		min-height: 300px;
+	}
+	
+	.helper {
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
 	}
 }
 
+.faq {
+	h2 {
+		margin-bottom: 1rem;
+	}
+}
+
+.whoami {
+	.my-portrait {
+		border: 15px $color-neutral-light solid;
+	}
+	
+	p {
+		margin-bottom: 15px;
+		margin-top: 5px;
+		line-height: 24px;
+		padding-left:20px;
+	}
+}
+
+.mailing-list-box {
+	background-color: $color-yellow-light;
+	text-align: center;
+	padding-top:1rem;
+	padding-bottom:1rem;
+	border-radius: 15px;
+	box-shadow: 1px 1px 0px $color-neutral-light;
+	
+	input {
+		margin-top: 10px;
+	}
+}
+
+
+footer {
+	width: 100%;
+	margin: 20px auto;
+	text-align: center;
+	color: $color-neutral-dark;
+	font-weight: bold;
+}
