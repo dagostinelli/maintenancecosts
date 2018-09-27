@@ -13,3 +13,102 @@ body {
 	background: #e8e6e3;
 }
 
+$color-neutral: rgb(131, 125, 124);
+$color-yellow: rgb(208, 251, 5);
+$color-red: rgb(225, 30, 56);
+$color-magenta: rgb(208, 47, 207);
+$color-cyan: rgb(20, 179, 235);
+$color-green: rgb(87, 156, 70);
+
+$color-yellow-light: rgb(241, 254, 179);
+$color-neutral-light: rgb(218, 215, 215);
+
+$color-neutral-dark: rgb(39, 37, 37);
+
+$heading-color: $color-red;
+
+body, h1, h2, h3, h4, p, blockquote, code, ul, li, ol, dl, dd, img {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: $color-neutral-dark;
+	font: serif;
+	background: $color-neutral-light;
+	/*background-image: url('../img/abstract-ancient-antique-235985.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;*/
+}
+
+.page {
+	max-width: 640px;
+	margin: 0 auto;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 2rem;
+	border-left: solid 1px #bbb;
+	border-right: solid 1px #bbb;
+	border-bottom: solid 1px #999;
+	box-shadow: 0 0 40px rgba(71, 51, 31, 0.2);
+	background: white;
+	
+	background-image:url('../img/code-background.png');
+	background-repeat: no-repeat;
+	background-size: 100% 30vh;
+}
+
+.content-well {
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+// ensures that images scale (responsive design)
+img {
+	max-width:100%;
+}
+
+h1 {
+	color: $heading-color;
+	font: 300 35px sans-serif;
+	font-weight: bold;
+	padding: 0 0 2px 0;
+}
+
+h2 {
+	color: $heading-color;
+	font: 300 35px sans-serif;
+}
+
+p {
+	margin-bottom: 15px;
+	margin-top: 5px;
+	line-height: 24px;
+}
+
+ul {
+	margin-left:2rem;
+}
+
+footer {
+	width: 100%;
+	margin: 20px auto;
+	text-align: center;
+	color: $color-neutral-dark;
+	font-weight: bold;
+}
+
+.nav-table {
+	width: 100%;
+	border-bottom: 1px solid blue;
+}
+
+.center {
+	text-align:center;
+}
+.right {
+	text-align:right;
+}

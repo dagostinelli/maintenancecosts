@@ -19,4 +19,7 @@ cp -a assets/* ../docs/
 mkdir -p ../docs/css
 scss templates/index.scss ../docs/css/index.css
 
+mkdir -p ../docs/book/css
+scss templates/chapter.scss ../docs/book/css/chapter.css
+
 popd
