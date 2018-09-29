@@ -14,6 +14,7 @@ output_location_root = whereami + '/../docs'
 chapters = [
 	'toc.md',
 	'introduction.md',
+	'audience.md',
 	'curate-your-code.md'
 ]
 
