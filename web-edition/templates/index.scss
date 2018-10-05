@@ -39,10 +39,6 @@ body {
 	border-bottom: solid 1px #999;
 	box-shadow: 0 0 40px rgba(71, 51, 31, 0.2);
 	background: white;
-	
-	background-image:url('../img/code-background.png');
-	background-repeat: no-repeat;
-	background-size: 100% 30vh;
 }
 
 // ensures that images scale (responsive design)
@@ -73,13 +69,16 @@ p {
 }
 
 .book-title {
-
 	min-height: 15vh;
 	
 	padding-top:2rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
 	padding-bottom:2rem;
+	
+	background-image:url('../img/code-background.png');
+	background-repeat: no-repeat;
+	background-size: 100% 30vh;	
 	
 	h1 {
 		font-family: 'Luckiest Guy', cursive;
@@ -142,8 +141,7 @@ p {
 		
 		.stuff {
 			vertical-align:bottom;	
-			display:table-cell;
-			height: 40vh;
+			display:table-cell;			
 		}
 	}	
 }
