@@ -2,42 +2,30 @@
 
 default: build
 
-venv_directory = ./venv
-dist_directory = ./../docs/book
-md_directory = ./../book
+dist_directory = ./../docs
 
 clean:
-	@rm -rf $(venv_directory)/
 	@rm -rf $(dist_directory)/
 	@rm -rf ./.sass-cache/
 	@rm -f .build-canary
 
-prep: $(venv_directory)
+prep:
 	@rm -rf $(dist_directory)/*
 	@mkdir -p $(dist_directory)/css
 	@mkdir -p $(dist_directory)/img
 	@mkdir -p $(dist_directory)/js
 
-$(venv_directory):
-	@python3 -m venv venv
-	@./venv/bin/pip install git+https://github.com/dagostinelli/spoonbill pyinotify htmlmin
+build_css: $(dist_directory)/css/index.css
 
-build_html: $(patsubst $(md_directory)/%.md, $(dist_directory)/%.html, $(wildcard $(md_directory)/*.md $(md_directory)/**/*.md))
-build_css: $(dist_directory)/css/chapter.css
-
-$(dist_directory)/%.html: $(md_directory)/%.md
-	@./venv/bin/spoonbill compile ./templates/ default.json $< | ./venv/bin/htmlmin -s > $@
-
-$(dist_directory)/css/chapter.css:
-	@scss --style compressed --sourcemap=none ./scss/chapter.scss ./$(dist_directory)/css/chapter.css
+$(dist_directory)/css/index.css:
+	@scss --style compressed --sourcemap=none ./scss/index.scss ./$(dist_directory)/css/index.css
 
 build: prep
 	# copy assets
 	@cp -a ./assets/* ./$(dist_directory)/
 
-	# build the html pages
+	# build the css file
 	@$(MAKE) build_css
-	@$(MAKE) build_html
 
 optimize:
 	@mogrify -quality 60% -resize "1000^>" $(dist_directory)/img/*.jpg
