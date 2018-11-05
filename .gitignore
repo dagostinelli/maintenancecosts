@@ -1,2 +1,3 @@
 /web-edition/venv
 .sass-cache/
+.build-canary

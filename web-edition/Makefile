@@ -56,7 +56,7 @@ watch: build
 	parallel ::: "$(MAKE) watch_listen" "$(MAKE) watch_do"
 
 serve_do:
-	@cd $(dist_directory) && pwd && ./../venv/bin/python3 -m http.server
+	@cd $(dist_directory) && pwd && ./../../web-edition/venv/bin/python3 -m http.server
 
 serve: build
 	parallel ::: "$(MAKE) watch_listen" "$(MAKE) watch_do" "$(MAKE) serve_do"
