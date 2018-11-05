@@ -3,12 +3,14 @@
 default: build
 
 venv_directory = ./venv
+docs_directory = ./../docs
 dist_directory = ./../docs/book
 md_directory = ./../book
 
 clean:
 	@rm -rf $(venv_directory)/
 	@rm -rf $(dist_directory)/
+	@rm -rf $(docs_directory)/
 	@rm -rf ./.sass-cache/
 	@rm -f .build-canary
 
